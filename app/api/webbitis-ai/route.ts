@@ -424,10 +424,15 @@ export async function POST(req: Request) {
         };
 
         try {
+          console.log("SHEET TEST", {
+  spreadsheetId: process.env.GOOGLE_SHEETS_SPREADSHEET_ID,
+  sheetName: process.env.GOOGLE_SHEETS_SHEET_NAME,
+  clientEmail: process.env.GOOGLE_SHEETS_CLIENT_EMAIL,
+});
           await appendLeadToSheet(row);
         } catch (sheetError) {
-          console.error("Google Sheets error:", sheetError);
-        }
+  console.error("Google Sheets error full:", sheetError);
+}
 
         sentLeadSessions.set(sessionId, currentSignature);
         leadCaptured = true;
