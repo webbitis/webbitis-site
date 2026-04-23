@@ -2,13 +2,14 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import { Analytics } from "@vercel/analytics/react"; // 👈 Ավելացրու սա
 
 export const metadata: Metadata = {
   title: "Webbitis | Premium Web Design, SEO, Automation & AI Solutions",
   description:
     "Webbitis creates premium business websites, SEO strategies, workflow automation and AI-powered digital solutions for businesses in Armenia, Canada and the US.",
-   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000"),
-    icons: {
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000"),
+  icons: {
     icon: "/images/favicon.ico",
     shortcut: "/images/favicon.ico",
     apple: "/images/favicon.ico",
@@ -43,6 +44,8 @@ export default function RootLayout({
         <Header />
         {children}
         <Footer />
+
+        <Analytics /> 
       </body>
     </html>
   );
