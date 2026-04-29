@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 80" role="img">
+  <title>WebBitis — AI · Web · Automation</title>
+  <desc>Логотип WebBitis с буквой W и слоганом AI · Web · Automation</desc>
+
+  <!-- Фон прозрачный — вставляется на любой фон -->
+
+  <!-- W из линий -->
+  <polyline points="18,12 30,52 40,28 50,52 62,12" fill="none" stroke="#ffffff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- Розовая точка — AI маркер -->
+  <circle cx="66" cy="12" r="5" fill="#ec4899"/>
+  <circle cx="66" cy="12" r="9" fill="none" stroke="#ec4899" stroke-width="0.8" opacity="0.35"/>
+
+  <!-- Текст WebBitis -->
+  <text x="80" y="46" font-family="system-ui, -apple-system, sans-serif" font-size="32" font-weight="500" fill="#ffffff" letter-spacing="-0.5">WebBitis</text>
+
+  <!-- Разделительная линия -->
+  <line x1="80" y1="54" x2="298" y2="54" stroke="#1e1b4b" stroke-width="0.8"/>
+
+  <!-- Слоган -->
+  <text x="80" y="70" font-family="system-ui, -apple-system, sans-serif" font-size="10" fill="#a855f7" letter-spacing="2.5">AI · WEB · AUTOMATION</text>
+</svg>

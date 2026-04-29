@@ -65,23 +65,15 @@ export default function Header() {
       <div className="relative z-10 mx-auto flex h-20 max-w-[1380px] items-center justify-between px-5 lg:px-8">
         <Link href="/" className="flex items-center gap-3">
           <Image
-            src="/images/webbitis/logo.webp"
+            src="/images/webbitis/logo.svg"
             alt="Webbitis"
-            width={76}
-            height={76}
+            width={200}
+            height={200}
             priority
-            className="h-auto w-[74px] lg:w-[76px]"
+            className="h-auto w-[200px] lg:w-[200px]"
           />
 
-          <div className="hidden lg:block">
-            <div className="text-[13px] font-semibold uppercase tracking-[0.34em] text-white/92">
-              Webbitis
-            </div>
-
-            <div className="mt-1 text-[10px] uppercase tracking-[0.24em] text-white/34">
-              Digital Presence Studio
-            </div>
-          </div>
+       
         </Link>
 
         <nav className="hidden items-center gap-9 lg:flex">

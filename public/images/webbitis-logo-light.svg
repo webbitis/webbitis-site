@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 80" role="img">
+  <title>WebBitis — AI · Web · Automation (светлый фон)</title>
+  <desc>Логотип WebBitis для использования на белом или светлом фоне</desc>
+
+  <!-- W из линий — тёмный для светлого фона -->
+  <polyline points="18,12 30,52 40,28 50,52 62,12" fill="none" stroke="#0a0b1e" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- Розовая точка — AI маркер -->
+  <circle cx="66" cy="12" r="5" fill="#ec4899"/>
+  <circle cx="66" cy="12" r="9" fill="none" stroke="#ec4899" stroke-width="0.8" opacity="0.35"/>
+
+  <!-- Текст WebBitis -->
+  <text x="80" y="46" font-family="system-ui, -apple-system, sans-serif" font-size="32" font-weight="500" fill="#0a0b1e" letter-spacing="-0.5">WebBitis</text>
+
+  <!-- Разделительная линия -->
+  <line x1="80" y1="54" x2="298" y2="54" stroke="#e5e7eb" stroke-width="0.8"/>
+
+  <!-- Слоган -->
+  <text x="80" y="70" font-family="system-ui, -apple-system, sans-serif" font-size="10" fill="#6b21a8" letter-spacing="2.5">AI · WEB · AUTOMATION</text>
+</svg>

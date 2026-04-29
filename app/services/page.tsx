@@ -1,21 +1,20 @@
 import Link from "next/link";
 
 export const metadata = {
-  title: "Services | Web Design, SEO, Automation & AI | Webbitis",
+  title: "Web Design, SEO & AI Services in Armenia | Webbitis",
   description:
-    "Explore Webbitis services including premium web design, website redesign, SEO, workflow automation, AI integration and web invitations for businesses in Armenia, Canada and the USA.",
+    "Webbitis offers premium web design, website development, SEO services, workflow automation and AI integration for businesses in Armenia, Canada and the USA.",
   keywords: [
-    "web design",
-     "web site",
+    "web design Armenia",
     "website development Armenia",
     "SEO services Armenia",
+    "AI integration for business",
     "workflow automation",
-    "AI integration",
-    "web invitations",
+    "digital agency Armenia",
+    "website redesign Armenia",
+    "web development Armenia",
     "կայքերի պատրաստում",
-    "վեբ հրավերս",
     "SEO ծառայություններ",
-    "Webbitis services",
   ],
 };
 
@@ -31,16 +30,17 @@ export default function AboutPage() {
             </span>
 
             <h1 className="mt-6 max-w-[11ch] text-[clamp(2.6rem,4.5vw,4.8rem)] font-semibold leading-[0.92] tracking-[-0.07em] text-white">
-              More than 15 years creating premium websites and digital experiences.
+              Web Design, SEO & AI Services for Businesses
             </h1>
 
             <p className="mt-7 max-w-[720px] text-[1.04rem] leading-9 text-white/66">
-              Webbitis is a digital agency in Armenia specializing in premium web
-              design, website development, SEO services, website redesign,
-              workflow automation, and AI integration for business. We help
-              companies create a stronger, more modern, and more professional
-              digital presence.
-            </p>
+  Webbitis is a digital agency in Armenia specializing in premium web
+  design, website development, SEO services, website redesign,
+  workflow automation, and AI integration for business.
+  
+  We help companies build modern, high-performing websites that attract
+  clients, improve visibility on Google, and automate business processes.
+</p>
 
             <div className="mt-10 flex flex-wrap gap-4">
               <Link
@@ -185,6 +185,24 @@ export default function AboutPage() {
       ))}
     </div>
   </div>
+</section>
+
+<section className="mt-14 border border-white/8 bg-white/[0.03] p-7 lg:p-9">
+  <h2 className="text-[1.6rem] font-semibold text-white">
+    Webbitis Digital Services in Armenia
+  </h2>
+
+  <p className="mt-5 text-[1rem] leading-8 text-white/64">
+    Webbitis provides professional web design and development services in Armenia,
+    helping businesses create modern and high-performing websites. Our SEO services
+    improve Google rankings and increase visibility, while workflow automation and
+    AI integration help businesses operate more efficiently and reduce manual work.
+  </p>
+
+  <p className="mt-5 text-[1rem] leading-8 text-white/64">
+    Whether you need a new website, redesign, SEO strategy or AI-powered solution,
+    Webbitis delivers premium digital experiences tailored to your business goals.
+  </p>
 </section>
 
       <section className="py-14 lg:py-16">

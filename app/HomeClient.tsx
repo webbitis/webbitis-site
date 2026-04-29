@@ -316,28 +316,25 @@ export default function WebbitisUltraPremiumPage() {
           <div key={active} className="max-w-[960px]">
   <div className="mb-5 inline-flex items-center gap-2 border border-white/10 bg-white/[0.04] px-3 py-2 text-[10px] uppercase tracking-[0.24em] text-[#d9b6cb] backdrop-blur-xl">
     <span className="h-[6px] w-[6px] bg-[#e86ac6]" />
-    Premium Web Design / SEO / Automation / AI
+   AI Chatbots · Web Development · Automation · SEO
   </div>
 
   <div className="space-y-5">
   <h1 className="max-w-[13ch] text-[clamp(2.3rem,4vw,4.2rem)] font-semibold leading-[0.92] tracking-[-0.06em] text-white">
-    Premium websites that make your business look more valuable.
+    We build websites and AI systems that help your business get more clients — automatically.
   </h1>
 
   <div className="max-w-[18ch] text-[clamp(1.15rem,2vw,1.75rem)] font-medium leading-[1.06] tracking-[-0.03em] bg-[linear-gradient(90deg,#ffffff_0%,#f3bfdc_18%,#e86ac6_46%,#b8328a_72%,#ffffff_100%)] bg-clip-text text-transparent">
-    Built to be noticed. Designed to be trusted.
+   Built to be noticed. Designed to convert.
   </div>
 
   <p className="max-w-[760px] text-[1.04rem] leading-8 text-white/72">
-    Webbitis creates refined, high-end websites for businesses in Armenia,
-    Canada, and the USA that want to look more professional, more
-    trustworthy, and more expensive from the very first second.
+    WebBitis creates high-end websites and AI-powered tools for businesses in Armenia, Canada, and the USA. We don't just make you look professional — we help you respond faster, sell more, and work less.
+
   </p>
 
   <p className="max-w-[760px] text-[1rem] leading-8 text-white/56">
-    Beyond web design, we provide SEO, website redesign, workflow
-    automation, and AI integration for businesses that want a stronger
-    digital presence and a more premium image.
+    From premium web design to AI chatbots that answer your Instagram and Facebook messages 24/7 — we build the digital infrastructure your business needs to grow.
   </p>
 </div>
 
@@ -429,7 +426,7 @@ export default function WebbitisUltraPremiumPage() {
       </span>
 
       <span className="max-w-[150px] text-right text-[0.95rem] font-medium leading-6 text-white">
-        Web Design, SEO, Automation, AI
+        AI · Web Design · Automation · SEO
       </span>
     </div>
 
@@ -439,7 +436,7 @@ export default function WebbitisUltraPremiumPage() {
       </span>
 
       <span className="text-right text-[0.95rem] font-medium text-white">
-        Armenia / Canada / USA
+        Armenia · Canada · USA
       </span>
     </div>
   </div>
@@ -1071,7 +1068,7 @@ export default function WebbitisUltraPremiumPage() {
       "@type": "Organization",
       name: "Webbitis",
       url: "https://webbitis.com",
-      logo: "https://webbitis.com/images/webbitis/logo.webp",
+      logo: "https://webbitis.com/images/webbitis/logo.svg",
       description:
         "Premium web design, SEO, automation and AI solutions for businesses.",
       address: {

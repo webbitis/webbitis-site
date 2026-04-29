@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
-import { Analytics } from "@vercel/analytics/react"; // 👈 Ավելացրու սա
+import { Analytics } from "@vercel/analytics/react"; 
 
 export const metadata: Metadata = {
   title: "Webbitis | Premium Web Design, SEO, Automation & AI Solutions",
@@ -10,9 +10,9 @@ export const metadata: Metadata = {
     "Webbitis creates premium business websites, SEO strategies, workflow automation and AI-powered digital solutions for businesses in Armenia, Canada and the US.",
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000"),
   icons: {
-    icon: "/images/favicon.ico",
-    shortcut: "/images/favicon.ico",
-    apple: "/images/favicon.ico",
+    icon: "/images/favicon.svg",
+    shortcut: "/images/favicon.svg",
+    apple: "/images/favicon.svg",
   },
   openGraph: {
     title: "Webbitis | Premium Web Design, SEO & AI Solutions",

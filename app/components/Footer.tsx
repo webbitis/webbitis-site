@@ -32,19 +32,12 @@ export default function Footer() {
           <div className="grid grid-cols-1 gap-12 lg:grid-cols-[1.2fr_0.8fr_0.8fr] lg:gap-10">
             <div>
               <div className="flex items-center gap-4">
-                <Image src="/images/webbitis/logo.webp"   alt="Webbitis logo – premium web design, SEO and AI solutions"
-                  width={80}
-                  height={80}
-                  className="h-auto w-[82px] lg:w-[84px]"
+                <Image src="/images/webbitis/logo.svg"   alt="Webbitis logo – premium web design, SEO and AI solutions"
+                  width={200}
+                  height={200}
+                  className="h-auto w-[200px] lg:w-[200px]"
                 />
-                <div className="hidden lg:block">
-                  <div className="text-[13px] font-semibold uppercase tracking-[0.28em] text-white/88">
-                    Webbitis
-                  </div>
-                  <div className="mt-2 text-[11px] uppercase tracking-[0.18em] text-white/34">
-                    Designing presence. Building clarity.
-                  </div>
-                </div>
+               
               </div>
 
               <p className="mt-6 max-w-[520px] text-[15px] leading-8 text-white/62">
