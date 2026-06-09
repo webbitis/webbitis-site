@@ -281,8 +281,9 @@ export default function WebbitisUltraPremiumPage() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<"success" | "error" | "">("");
 
- const handleContactSubmit = async (
-e: React.FormEvent
+const handleContactSubmit = async (
+  e: React.SubmitEvent
+
 ) => {
 e.preventDefault();
 
@@ -290,7 +291,7 @@ setIsSubmitting(true);
 setSubmitStatus("");
 
 try {
-const form = e.currentTarget;
+const form = e.currentTarget as HTMLFormElement;
 const formData = new FormData(form);
 
 const payload = {
