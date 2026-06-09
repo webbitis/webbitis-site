@@ -1,5 +1,5 @@
 import Link from "next/link";
-
+import PartnerNav from "../components/PartnerNav";
 const services = [
   {
     title: "Webi AI Assistant",
@@ -41,7 +41,9 @@ const clients = [
 export default function PartnersPage() {
   return (
     <main className="min-h-screen bg-[#071327] text-white">
+        
       <section className="relative overflow-hidden px-6 py-24 md:px-12 lg:px-24">
+        
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,#e86ac633,transparent_35%),radial-gradient(circle_at_bottom_left,#4f46e533,transparent_35%)]" />
 
         <div className="relative mx-auto max-w-6xl">
@@ -72,18 +74,19 @@ export default function PartnersPage() {
             >
               Տեսնել ծառայությունները
             </Link>
-            <Link
- href="/partner-materials"
- className="rounded-full border border-[#E86AC6]/30 bg-[#E86AC6]/10 px-8 py-4 text-white"
->
- Partner Materials
-</Link>
+            
+
+
           </div>
         </div>
       </section>
 
       <section id="services" className="px-6 py-20 md:px-12 lg:px-24">
+          <PartnerNav /> 
         <div className="mx-auto max-w-6xl">
+
+
+         
           <h2 className="text-3xl font-semibold md:text-4xl">
             Ինչ ենք վաճառում
           </h2>

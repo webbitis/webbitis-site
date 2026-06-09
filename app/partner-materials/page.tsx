@@ -1,8 +1,9 @@
+import PartnerNav from "../components/PartnerNav";
 export default function PartnerMaterialsPage() {
   return (
     <main className="min-h-screen bg-[#071327] text-white">
 
-      <section className="px-6 py-20 md:px-12 lg:px-24">
+      <section className="px-1 py-27 md:px-12 lg:px-24">
         <div className="mx-auto max-w-6xl">
 
           <span className="rounded-full bg-[#E86AC6]/10 border border-[#E86AC6]/20 px-4 py-2 text-sm">
@@ -20,6 +21,7 @@ export default function PartnerMaterialsPage() {
 
         </div>
       </section>
+      <PartnerNav />
 
       {/* Elevator Pitch */}
 

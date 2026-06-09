@@ -1,3 +1,4 @@
+import PartnerNav from "../components/PartnerNav";
 const priceSections = [
   {
     title: "Կայքերի տեսակներ",
@@ -205,6 +206,7 @@ const priceSections = [
 export default function PricesPage() {
   return (
     <main className="min-h-screen bg-[#071327] px-6 pt-32 pb-24 text-white">
+           <PartnerNav />
       <section className="mx-auto max-w-7xl">
         <div className="mb-14">
           <span className="rounded-full border border-[#E86AC6]/30 bg-[#E86AC6]/10 px-4 py-2 text-sm text-[#E86AC6]">
