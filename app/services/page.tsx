@@ -44,14 +44,14 @@ export default function AboutPage() {
 
             <div className="mt-10 flex flex-wrap gap-4">
               <Link
-                href="/webbitis/services"
+                href="/services"
                 className="inline-flex min-h-[54px] items-center justify-center border border-[rgba(232,106,198,0.28)] bg-[linear-gradient(135deg,#7a1d63_0%,#b8328a_55%,#e86ac6_100%)] px-6 text-[12px] font-semibold uppercase tracking-[0.16em] text-white"
               >
                 Explore Services
               </Link>
 
               <Link
-                href="/webbitis#contact"
+                href="/#contact"
                 className="inline-flex min-h-[54px] items-center justify-center border border-white/10 px-6 text-[12px] font-semibold uppercase tracking-[0.16em] text-white/72 transition duration-300 hover:border-white/20 hover:text-white"
               >
                 Contact Us
@@ -117,37 +117,37 @@ export default function AboutPage() {
         {
           title: "Web Design & Development",
           text: "Premium websites with modern design and reliable development.",
-          href: "/webbitis/services/web-design",
+          href: "/services/web-design",
           image: "/images/webbitis/develop.webp",
         },
         {
           title: "Web Invitations",
           text: "Elegant digital invitations for weddings, birthdays, and events.",
-          href: "/webbitis/services/web-invitations",
+          href: "/services/web-invitations",
           image: "/images/webbitis/invitation.webp",
         },
         {
           title: "SEO Services",
           text: "Improve visibility, search rankings, and online credibility.",
-          href: "/webbitis/services/seo",
+          href: "/services/seo",
           image: "/images/webbitis/seo.webp",
         },
         {
           title: "Website Redesign",
           text: "Transform outdated websites into modern and premium experiences.",
-          href: "/webbitis/services/website-redesign",
+          href: "/services/website-redesign",
           image: "/images/webbitis/redesign.webp",
         },
         {
           title: "Workflow Automation",
           text: "Internal systems and automation that save time and reduce manual work.",
-          href: "/webbitis/services/workflow-automation",
+          href: "/services/workflow-automation",
           image: "/images/webbitis/automation.webp",
         },
         {
           title: "AI Integration",
           text: "Practical AI features for smarter websites and business tools.",
-          href: "/webbitis/services/ai-integration",
+          href: "/services/ai-integration",
           image: "/images/webbitis/ai.webp",
         },
       ].map((service) => (

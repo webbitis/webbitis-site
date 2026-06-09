@@ -220,6 +220,7 @@ const projects = [
   
 ];
 
+
 const SectionShell = ({
   id,
   className = "",
@@ -276,7 +277,52 @@ const SectionHead = ({
 
 export default function WebbitisUltraPremiumPage() {
   const [active, setActive] = useState(0);
-  
+
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<"success" | "error" | "">("");
+
+ const handleContactSubmit = async (
+e: React.FormEvent
+) => {
+e.preventDefault();
+
+setIsSubmitting(true);
+setSubmitStatus("");
+
+try {
+const form = e.currentTarget;
+const formData = new FormData(form);
+
+const payload = {
+  name: formData.get("name"),
+  email: formData.get("email"),
+  service: formData.get("service"),
+  budget: formData.get("budget"),
+  details: formData.get("details"),
+};
+
+const response = await fetch("/api/contact", {
+  method: "POST",
+  headers: {
+    "Content-Type": "application/json",
+  },
+  body: JSON.stringify(payload),
+});
+
+if (!response.ok) {
+  throw new Error("Failed to send");
+}
+
+setSubmitStatus("success");
+form.reset();
+
+} catch (error) {
+console.error(error);
+setSubmitStatus("error");
+} finally {
+setIsSubmitting(false);
+}
+};
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -981,13 +1027,16 @@ export default function WebbitisUltraPremiumPage() {
               <div className="mt-8 h-px w-24 bg-[linear-gradient(90deg,#e86ac6,transparent)]" />
             </div>
 
-            <form className="grid grid-cols-1 gap-4 lg:grid-cols-2">
+            <form
+  onSubmit={handleContactSubmit}
+  className="grid grid-cols-1 gap-4 lg:grid-cols-2"
+>
               <div>
                 <label className="mb-2 block text-[12px] uppercase tracking-[0.12em] text-white/72">
                   Name
                 </label>
                 <input
-                  type="text"
+                  type="text" name="name" required
                   placeholder="Your name"
                   className="h-14 w-full border border-white/10 bg-white/[0.06] px-4 text-white outline-none transition-all duration-300 placeholder:text-white/34 focus:border-[rgba(232,106,198,0.28)] focus:bg-white/[0.08]"
                 />
@@ -997,8 +1046,8 @@ export default function WebbitisUltraPremiumPage() {
                 <label className="mb-2 block text-[12px] uppercase tracking-[0.12em] text-white/72">
                   Email
                 </label>
-                <input
-                  type="email"
+                <input name="email" required
+                  type="email" 
                   placeholder="your@email.com"
                   className="h-14 w-full border border-white/10 bg-white/[0.06] px-4 text-white outline-none transition-all duration-300 placeholder:text-white/34 focus:border-[rgba(232,106,198,0.28)] focus:bg-white/[0.08]"
                 />
@@ -1008,7 +1057,7 @@ export default function WebbitisUltraPremiumPage() {
   <label className="mb-2 block text-[12px] uppercase tracking-[0.12em] text-white/72">
     Service
   </label>
-  <select className="h-14 w-full border border-white/10 bg-white/[0.06] px-4 text-white [color-scheme:dark] outline-none transition-all duration-300 focus:border-[rgba(232,106,198,0.28)] focus:bg-white/[0.08]">
+  <select name="service"  className="h-14 w-full border border-white/10 bg-white/[0.06] px-4 text-white [color-scheme:dark] outline-none transition-all duration-300 focus:border-[rgba(232,106,198,0.28)] focus:bg-white/[0.08]">
     <option className="bg-[#0d1117] text-white">Business Website</option>
     <option className="bg-[#0d1117] text-white">Web Invitation</option>
     <option className="bg-[#0d1117] text-white">Modernization</option>
@@ -1022,7 +1071,7 @@ export default function WebbitisUltraPremiumPage() {
   <label className="mb-2 block text-[12px] uppercase tracking-[0.12em] text-white/72">
     Budget
   </label>
-  <select className="h-14 w-full border border-white/10 bg-white/[0.06] px-4 text-white [color-scheme:dark] outline-none transition-all duration-300 focus:border-[rgba(232,106,198,0.28)] focus:bg-white/[0.08]">
+  <select  name="budget" className="h-14 w-full border border-white/10 bg-white/[0.06] px-4 text-white [color-scheme:dark] outline-none transition-all duration-300 focus:border-[rgba(232,106,198,0.28)] focus:bg-white/[0.08]">
     <option className="bg-[#0d1117] text-white">Up to $1000</option>
     <option className="bg-[#0d1117] text-white">$1000 – $2500</option>
     <option className="bg-[#0d1117] text-white">$2500 – $5000</option>
@@ -1034,7 +1083,7 @@ export default function WebbitisUltraPremiumPage() {
                 <label className="mb-2 block text-[12px] uppercase tracking-[0.12em] text-white/72">
                   Project Details
                 </label>
-                <textarea
+                <textarea name="details" required
                   rows={5}
                   placeholder="Tell us what you need"
                   className="w-full border border-white/10 bg-white/[0.06] px-4 py-4 text-white outline-none transition-all duration-300 placeholder:text-white/34 focus:border-[rgba(232,106,198,0.28)] focus:bg-white/[0.08]"
@@ -1043,15 +1092,31 @@ export default function WebbitisUltraPremiumPage() {
 
               <div className="lg:col-span-2">
                 <button
-                  type="submit"
-                  className="group inline-flex min-h-[60px] w-full items-center justify-center gap-2 border border-[rgba(232,106,198,0.30)] bg-[linear-gradient(135deg,#7a1d63_0%,#b8328a_50%,#e86ac6_100%)] px-6 text-[13px] font-bold uppercase tracking-[0.14em] text-white shadow-[0_18px_40px_rgba(184,50,138,0.32)] transition duration-300 hover:-translate-y-0.5 hover:shadow-[0_24px_48px_rgba(232,106,198,0.38)]"
-                >
-                  Send Inquiry
-                  <ArrowUpRight
-                    size={16}
-                    className="transition duration-300 group-hover:-translate-y-1 group-hover:translate-x-1"
-                  />
-                </button>
+  type="submit"
+  disabled={isSubmitting}
+  className="group inline-flex min-h-[60px] w-full items-center justify-center gap-2 border border-[rgba(232,106,198,0.30)] bg-[linear-gradient(135deg,#7a1d63_0%,#b8328a_50%,#e86ac6_100%)] px-6 text-[13px] font-bold uppercase tracking-[0.14em] text-white shadow-[0_18px_40px_rgba(184,50,138,0.32)] transition duration-300 hover:-translate-y-0.5 hover:shadow-[0_24px_48px_rgba(232,106,198,0.38)] disabled:cursor-not-allowed disabled:opacity-60"
+>
+  {isSubmitting ? "Sending..." : "Send Inquiry"}
+  <ArrowUpRight
+    size={16}
+    className="transition duration-300 group-hover:-translate-y-1 group-hover:translate-x-1"
+  />
+</button>
+{submitStatus === "success" && (
+  <div className="lg:col-span-2">
+    <p className="border border-emerald-400/20 bg-emerald-400/10 px-4 py-3 text-sm text-emerald-200">
+      Thank you! Your inquiry has been sent successfully. We’ll contact you soon.
+    </p>
+  </div>
+)}
+
+{submitStatus === "error" && (
+  <div className="lg:col-span-2">
+    <p className="border border-red-400/20 bg-red-400/10 px-4 py-3 text-sm text-red-200">
+      Something went wrong. Please try again.
+    </p>
+  </div>
+)}
               </div>
             </form>
           </div>
