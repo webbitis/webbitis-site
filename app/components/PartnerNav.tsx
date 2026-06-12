@@ -3,6 +3,7 @@ import Link from "next/link";
 const partnerLinks = [
   { href: "/partners", label: "Partner Program" },
   { href: "/partner-materials", label: "Sales Materials" },
+  { href: "/partner-scripts", label: "Scripts" },
   { href: "/prices", label: "Prices" },
   { href: "/submit-lead", label: "Submit Lead", primary: true },
 ];
