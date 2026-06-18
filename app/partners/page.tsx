@@ -42,7 +42,7 @@ export default function PartnersPage() {
   return (
     <main className="min-h-screen bg-[#071327] text-white">
         
-      <section className="relative overflow-hidden px-6 py-24 md:px-12 lg:px-24">
+      <section className="relative overflow-hidden px-6 py-12 md:px-12 lg:px-12">
         
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,#e86ac633,transparent_35%),radial-gradient(circle_at_bottom_left,#4f46e533,transparent_35%)]" />
 
@@ -79,13 +79,13 @@ export default function PartnersPage() {
 
           </div>
         </div>
+        
       </section>
 
-      <section id="services" className="px-6 py-20 md:px-12 lg:px-24">
+      <section id="services" className="px-6 py-12 md:px-12 lg:px-15">
           <PartnerNav /> 
+        
         <div className="mx-auto max-w-6xl">
-
-
          
           <h2 className="text-3xl font-semibold md:text-4xl">
             Ինչ ենք վաճառում
@@ -119,7 +119,7 @@ export default function PartnersPage() {
         </div>
       </section>
 
-      <section className="px-6 py-20 md:px-12 lg:px-24">
+      <section className="px-6 py-12 md:px-12 lg:px-24">
         <div className="mx-auto grid max-w-6xl gap-8 md:grid-cols-3">
           <div className="rounded-3xl border border-white/10 bg-white/[0.04] p-7">
             <h3 className="text-2xl font-semibold">Referral Partner</h3>
@@ -147,7 +147,7 @@ export default function PartnersPage() {
         </div>
       </section>
 
-      <section className="px-6 py-20 md:px-12 lg:px-24">
+      <section className="px-6 py-12 md:px-12 lg:px-24">
         <div className="mx-auto max-w-6xl">
           <h2 className="text-3xl font-semibold md:text-4xl">
             Իդեալական հաճախորդներ

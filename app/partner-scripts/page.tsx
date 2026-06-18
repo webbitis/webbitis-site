@@ -75,8 +75,8 @@ I believe this solution could be useful for your business.`,
 export default function PartnerScriptsPage() {
   return (
     <main className="min-h-screen bg-[#F6F8FF] text-[#0B0B1E]">
-      <section className="mx-auto max-w-6xl px-6 py-12">
-        <PartnerNav />
+    <section className="mx-auto max-w-6xl px-6 pt-28 pb-14 md:pt-32">
+        <PartnerNav theme="light" />
 
         <div className="mb-10 max-w-3xl">
           <p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-[#E86AC6]">
